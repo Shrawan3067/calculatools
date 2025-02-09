@@ -1,0 +1,472 @@
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: url(dot-grid.webp);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    width: 100%;
+    height: 60px;
+    background-color: #6200ea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0px 20px;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    width: 20%;
+    margin-right: 40px;
+}
+
+#logo {
+    height: 50px;
+}
+
+.navbar {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navbar li {
+    list-style-type: none;
+}
+
+.navbar li a {
+    display: flex; 
+    align-items: center; 
+    height: 60px; 
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s ease; 
+}
+
+.navbar li a:hover {
+    background-color: #000000;
+}
+
+/* .search-container {
+    width: 100%;
+    display: flex;
+}
+
+#search {
+    width: 100%;
+    padding: 10px 40px 10px 20px; 
+    border: 1px solid black;
+    border-radius: 5px; 
+    font-size: 1rem;
+}
+
+.search-icon {
+    position: relative;
+    right: 25px;
+    top: 30px;
+    transform: translateY(-50%);
+    color: #6200ea; 
+    cursor: pointer;
+} */
+
+
+.hamburger-menu {
+    display: none;
+}
+.line {
+    height: 5px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#line1 {
+    width: 40px;
+}
+#line2 {
+    width: 35px;
+}
+#line3 {
+    width: 30px;
+}
+#line4 {
+    width: 25px;
+}
+
+main {
+    width: 70%;
+    min-width: 768px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.calculator {
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 15px;
+    width: 425px;
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    background-color: #3c3c3c;
+    color: #ffffff;
+    font-size: 24px;
+    text-align: right;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+}
+
+button {
+    background-color: #4c4c4c;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5c5c5c;
+}
+
+button.equals {
+    grid-column: span 2;
+    background-color: #ff9500;
+}
+
+button.equals:hover {
+    background-color: #ffaa33;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.calculator-bmi {
+    width: 500px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .calculator-bmi h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .calculator-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .calculator-form label {
+    font-size: 1rem;
+  }
+  
+  .calculator-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  #calculate-bmi {
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  #calculate-bmi:hover {
+    background-color: #3700b3;
+  }
+  
+  .result {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+.category-logo {
+    display: flex;
+    height: 150px;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+.category-logo img {
+    border-radius: 10px;
+}
+
+
+.calculator-category {
+    height: auto;
+    width: 70%;
+    min-width: 768px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.calculator-category h2 {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6200ea;
+    color: white;
+}
+
+.calculator-list {
+    height: 450px;
+    width: 30%;
+    /* box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2); */
+    /* border-radius: 10px; */
+    padding: 10px;
+    margin-right: 1.2rem;
+    margin-top: 1.5rem;
+    background-color: white;
+}
+
+.calculator-list2 {
+    height: 450px;
+    width: 32%;
+    /* box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2); */
+    /* border-radius: 10px; */
+    padding: 10px;
+    background-color: white;
+    margin-right: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.calculator-list:hover, .calculator-list2:hover {
+    box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.2);
+}
+
+.calculator-list h3, .calculator-list2 h3 {
+    font-size: 1.4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: green;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.calculator-list>a {
+    text-decoration: none;
+}
+.calculator-list2>a {
+    text-decoration: none;
+}
+
+.calculator-list>a:hover {
+    text-decoration: underline;
+}
+.calculator-list2>a:hover {
+    text-decoration: underline;
+}
+
+.calculator-list li, .calculator-list2 li {
+    list-style-type: none;
+    
+}
+
+.calculator-list li a, .calculator-list2 li a {
+    font-size: 1.1rem;
+    line-height: 0.24in;
+    color: gray;
+    text-decoration: none;
+}
+
+.calculator-list li a:hover, .calculator-list2 li a:hover {
+    text-decoration: underline;
+    color: rgb(136, 8, 8);
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #6200ea;
+    width: 100%;
+    height: 200px;
+    color: white;
+}
+
+.social {
+    font-size: 50px;
+    color: white;
+    opacity: 1;
+    margin-right: 10px;
+}
+
+.social:hover {
+   opacity: 0.8;
+}
+
+#copyright {
+    font-size: 18px;
+}
+
+.details {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.details a {
+    opacity: 1;
+    color: white;
+    font-size: 18px;
+}
+
+.details a:hover {
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 990px) {
+    * {
+        overflow-x: hidden;
+    }
+    .logo {
+        width: 210px;
+    }
+    #logo {
+        height: 40px;
+    }
+    .navbar {
+        width: 80%;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    * {
+        overflow-x: hidden;
+    }
+    .navbar {
+        display: none;
+    }
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        float: right;
+        width: 40px;
+        height: 40px;
+        align-items: end;
+    }
+    .logo {
+        width: 210px;
+    }
+    #logo {
+        height: 40px;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .calculator {
+        width: 350px;
+    }
+    .buttons {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 10px;
+    }
+    button {
+        font-size: 16px;
+        padding: 10px;
+    }
+    
+    .calculator-bmi {
+        width: 350px;
+    }
+    
+    .category-logo {
+        display: none;
+    }
+    
+    .calculator-category {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+    }
+    
+    .calculator-list {
+        height: auto;
+        width: 350px;
+        box-shadow: none;
+        border-radius: 0px;
+        margin-right: 0px;
+        margin-top: 1rem;
+        padding: 0px;
+    }
+    
+    .calculator-list2 {
+        height: auto;
+        width: 350px;
+        box-shadow: none;
+        border-radius: 0px;
+        margin-right: 0px;
+        margin-top: 1rem;
+        padding: 0px;
+    }
+    
+    .calculator-list:hover, .calculator-list2:hover {
+        box-shadow: none;
+    }
+    
+    .calculator-list h3, .calculator-list2 h3 {
+        background-color: #6200ea;
+        color: white;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        padding-left: 5px;
+    }
+}
