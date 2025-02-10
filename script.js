@@ -1,3 +1,17 @@
+const hamburger = document.querySelector('.hamburger-menu');
+const navMenu = document.getElementById('hamburgerNavbar');
+const closeBtn = document.getElementById('closeBtn');
+
+hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
+
+closeBtn.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+});
+
+
+
 let calculatorActive = false;
 
 document.querySelector(".calculator").addEventListener("click", function(event) {
@@ -147,7 +161,6 @@ document.getElementById('calculate-bmi').addEventListener('click', function () {
     const searchTerm = this.value.toLowerCase();
     // Add logic to search calculators
   });
-
 
 
 
