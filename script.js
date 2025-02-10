@@ -147,3 +147,10 @@ document.getElementById('calculate-bmi').addEventListener('click', function () {
     const searchTerm = this.value.toLowerCase();
     // Add logic to search calculators
   });
+
+
+
+
+  
+
+        
