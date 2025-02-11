@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percentage Calculator | Online Percentage Finder</title>
+    <meta name="description" content="Use this free Percentage Calculator to quickly find percentage values, percentage increase/decrease, and percentage change.">
+    <meta name="keywords" content="percentage calculator, percentage increase, percentage change, percentage formula, online calculator">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="Icons/final-logo-removebg-preview.png" alt="" id="logo">
+        </div>
+        <div class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="financial-calculator.html">Financial</a></li>
+            <li id="health"><a href="health-and-fitness-calulator.html">Health & Fitness</a></li>
+            <li><a href="math-calculator.html">Math</a></li>
+            <li><a href="science-calculator.html">Science</a></li>
+            <!-- <li><a href="#">Others</a></li> -->
+        </div>
+        <!-- <div class="search-container">
+            <input type="text" id="search" placeholder="Search for a calculator...">
+            <i class="fas fa-search search-icon"></i>
+        </div> -->
+        <div class="hamburger-menu">
+            <div class="line" id="line1"></div>
+            <div class="line" id="line2"></div>
+            <div class="line" id="line3"></div>
+            <div class="line" id="line4"></div>
+        </div>
+        <div class="hamburger-navbar" id="hamburgerNavbar">
+            <!-- <button class="close-btn" id="closeBtn">&times;</button> -->
+            <a href="index.html">Home</a>
+            <a href="financial-calculator.html">Financial Calculators</a>
+            <a href="health-and-fitness-calulator.html">Health & Fitness Calculators</a>
+            <a href="math-calculator.html">Math Calculators</a>
+            <a href="science-calculator.html">Sciece Calculators</a>
+            <a href="other-calculator.html">Other Calculators</a>
+            <a href="#">All Calculators</a>
+            <div class="hamburger-search-container">
+                <input type="text" id="hamburger-search" placeholder="Search for a calculator...">
+            </div>
+            <button type="submit" class="search-button">Search</button>
+            <div class="hamburger-socialIcons">
+                <a href="#" class="hamburger-social"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hamburger-social"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="hamburger-social"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="hamburger-social"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            <p>&copy; &ThickSpace; All rights reserved.</p>
+        </div>
+    </div>
+
+    <div class="percentage-calculator">
+        <h1>Percentage Calculator</h1>
+
+        <label for="pc-type">Choose Calculation Type:</label>
+        <select id="pc-type">
+            <option value="percentageOf">What is X% of Y?</option>
+            <option value="percentageIncrease">Percentage Increase/Decrease</option>
+            <option value="percentageOfAnother">X is what percent of Y?</option>
+            <option value="fractionToPercentage">Convert Fraction to Percentage</option>
+        </select>
+
+        <div id="pc-inputs">
+            <input type="number" id="pc-num1" placeholder="Enter first number">
+            <input type="number" id="pc-num2" placeholder="Enter second number">
+        </div>
+
+        <button onclick="calculate()">Calculate</button>
+
+        <div id="pc-result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

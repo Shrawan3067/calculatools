@@ -6,7 +6,6 @@
 }
 
 body {
-    background-image: url(dot-grid.webp);
     color: #333;
     display: flex;
     flex-direction: column;
@@ -112,7 +111,7 @@ body {
 
 .hamburger-search-container {
     width: 220px;
-    margin-top: 20px;
+    margin-top: 30px;
     border: 1px solid black;
     border-radius: 6px; 
 }
@@ -130,13 +129,13 @@ body {
     font-size: 20px;
     padding: 5px;
     width: 220px;
-    margin-top: 15px;
+    margin-top: 20px;
     box-shadow: 0px 0px 5px 1px white;
 }
 .hamburger-socialIcons {
     width: 140px;
     display: flex;
-    margin-top: 80px;
+    margin-top: 120px;
     justify-content: space-between;
 }
 .hamburger-social {
@@ -169,6 +168,13 @@ main {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+}
+
+.main-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #d1dde9;
 }
 
 /* Scientific Calculator */
@@ -302,7 +308,22 @@ button:active {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 20px 0px;
+    margin-bottom: 20px;
+}
+
+.calculator-category-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+}
+.calculator-category-div h2 {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    background-color: black;
 }
 
 .calculator-category h2 {
@@ -317,28 +338,21 @@ button:active {
     border-radius: 10px;
 }
 
+.row1, .row2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
 .calculator-list {
-    height: 390px;
-    width: 30%;
+    height: 350px;
+    width: auto;
     /* box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2); */
     /* border-radius: 10px; */
     padding: 10px;
-    margin-right: 1.2rem;
-    margin-top: 1.5rem;
-    background-color: white;
-}
-
-.calculator-list2 {
-    height: 390px;
-    width: 32%;
-    /* box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2); */
-    /* border-radius: 10px; */
-    padding: 10px;
-    background-color: white;
-    margin-right: 1.2rem;
     margin-top: 1.5rem;
 }
-
 
 .calculator-list h3, .calculator-list2 h3 {
     font-size: 1.4rem;
@@ -542,18 +556,13 @@ button:active {
         align-items: center;
         padding: 0px;
     }
-    
-    .calculator-list {
-        height: auto;
-        width: 350px;
-        box-shadow: none;
-        border-radius: 0px;
-        margin-right: 0px;
-        margin-top: 1rem;
-        padding: 0px;
+    .row1, .row2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
-    .calculator-list2 {
+    .calculator-list {
         height: auto;
         width: 350px;
         box-shadow: none;
@@ -567,7 +576,7 @@ button:active {
         box-shadow: none;
     }
     
-    .calculator-list h3, .calculator-list2 h3 {
+    .row1 h3, .row2 h3 {
         /* background-color: #6200ea; */
         background-color: black;
         color: white;
@@ -576,6 +585,7 @@ button:active {
         align-items: center;
         margin-bottom: 10px;
         padding-left: 5px;
+        width: 350px;
     }
 }
 
@@ -588,12 +598,11 @@ button:active {
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    border: 1px solid black;
     background-color: white;
 }
 
 .left-container, .right-container {
-    height: 1000px;
+    height: auto;
 }
 
 .left-container {
@@ -607,6 +616,28 @@ button:active {
     align-items: center;
     width: 35%;
 }
+
+@media screen and (max-width: 767px) {
+    .right-container {
+        display: none;
+    }
+    .financial-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .left-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 350px;
+    }
+    .up-container {
+        height: auto !important;
+        padding-top: 60px;
+    }
+}
+
 
 .right-box {
     height: 500px;
@@ -625,4 +656,112 @@ button:active {
     justify-content: space-between;
     width: 100%;
     height: 930px;
+}
+
+.ci-container {
+    width: 100%;
+    margin: 50px auto;
+    padding: 20px;
+    background: #eee;
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4); */
+    border: 1px solid #bbbbbb;
+    border-radius: 10px;
+}
+.ci-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.ci-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.ci-container select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.ci-container button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.ci-container button {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+}
+.ci-container button:hover {
+    background-color: #218838;
+}
+.ci-result {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Percentage Calculator */
+.percentage-calculator {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: auto;
+}
+
+.percentage-calculator h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.percentage-calculator label {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.percentage-calculator select {
+    display: block;
+    padding: 8px;
+    font-size: 16px;
+    width: 100%;
+    margin: 10px 0;
+}
+.percentage-calculator input {
+    display: block;
+    padding: 8px;
+    font-size: 16px;
+    width: 100%;
+    margin: 10px 0;
+}
+.percentage-calculator button {
+    display: block;
+    padding: 8px;
+    font-size: 16px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.percentage-calculator button {
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.percentage-calculator button:hover {
+    background: #0056b3;
+}
+
+#pc-result {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
 }

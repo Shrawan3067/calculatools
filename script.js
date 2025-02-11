@@ -165,5 +165,59 @@ document.getElementById('calculate-bmi').addEventListener('click', function () {
 
 
   
-
+  function calculateInterest() {
+    let principal = parseFloat(document.getElementById("principal").value);
+    let rate = parseFloat(document.getElementById("rate").value) / 100;
+    let time = parseFloat(document.getElementById("time").value);
+    let frequency = parseInt(document.getElementById("frequency").value);
+    
+    if (isNaN(principal) || isNaN(rate) || isNaN(time)) {
+        document.getElementById("ci-result").innerHTML = "Please enter valid numbers";
+        return;
+    }
+    
+    let amount = principal * Math.pow((1 + rate / frequency), frequency * time);
+    let compoundInterest = amount - principal;
+    
+    document.getElementById("ci-result").innerHTML = `
+        Final Amount: $${amount.toFixed(2)} <br>
+        Compound Interest: $${compoundInterest.toFixed(2)}
+    `;
+}
         
+
+function calculate() {
+  let type = document.getElementById("pc-type").value;
+  let num1 = parseFloat(document.getElementById("pc-num1").value);
+  let num2 = parseFloat(document.getElementById("pc-num2").value);
+  let resultDiv = document.getElementById("pc-result");
+
+  if (isNaN(num1) || isNaN(num2)) {
+      resultDiv.innerHTML = "Please enter valid numbers.";
+      return;
+  }
+
+  let result;
+  switch (type) {
+      case "percentageOf":
+          result = (num1 / 100) * num2;
+          resultDiv.innerHTML = `${num1}% of ${num2} is <strong>${result}</strong>`;
+          break;
+
+      case "percentageIncrease":
+          let change = ((num2 - num1) / num1) * 100;
+          let typeOfChange = change > 0 ? "Increase" : "Decrease";
+          resultDiv.innerHTML = `The percentage ${typeOfChange} from ${num1} to ${num2} is <strong>${Math.abs(change).toFixed(2)}%</strong>`;
+          break;
+
+      case "percentageOfAnother":
+          result = (num1 / num2) * 100;
+          resultDiv.innerHTML = `${num1} is <strong>${result.toFixed(2)}%</strong> of ${num2}`;
+          break;
+
+      case "fractionToPercentage":
+          result = (num1 / num2) * 100;
+          resultDiv.innerHTML = `The fraction ${num1}/${num2} as a percentage is <strong>${result.toFixed(2)}%</strong>`;
+          break;
+  }
+}

@@ -59,157 +59,178 @@
     </div>
 
     <!-- Main Section including scientific calculator and BMI Calculator -->
-    <main>
-        <!-- Scientific Calculator -->
-        <div class="calculator">
-            <input type="text" id="display" disabled>
-            <div class="buttons">
-              <!-- First Row -->
-              <button onclick="appendToDisplay('fact(')">!</button>
-              <button onclick="appendToDisplay('(')">(</button>
-              <button onclick="appendToDisplay(')')">)</button>
-              <button onclick="appendToDisplay('%')">%</button>
-              <button onclick="deleteLast()">DEL</button>
-              <button onclick="clearDisplay()">AC</button>
-        
-              <!-- Second Row -->
-              <button onclick="appendToDisplay('sin(')">sin</button>
-              <button onclick="appendToDisplay('ln(')">ln</button>
-              <button onclick="appendToDisplay('7')">7</button>
-              <button onclick="appendToDisplay('8')">8</button>
-              <button onclick="appendToDisplay('9')">9</button>
-              <button onclick="appendToDisplay('/')">÷</button>
-        
-              <!-- Third Row -->
-              <button onclick="appendToDisplay('cos(')">cos</button>
-              <button onclick="appendToDisplay('log(')">log</button>
-              <button onclick="appendToDisplay('4')">4</button>
-              <button onclick="appendToDisplay('5')">5</button>
-              <button onclick="appendToDisplay('6')">6</button>
-              <button onclick="appendToDisplay('*')">×</button>
-        
-              <!-- Fourth Row -->
-              <button onclick="appendToDisplay('tan(')">tan</button>
-              <button onclick="appendToDisplay('sqrt(')">√</button>
-              <button onclick="appendToDisplay('1')">1</button>
-              <button onclick="appendToDisplay('2')">2</button>
-              <button onclick="appendToDisplay('3')">3</button>
-              <button onclick="appendToDisplay('+')">+</button>      
-              
-        
-              <!-- Fifth Row -->
-              <button onclick="appendToDisplay('10^')">10ˣ</button>
-              <button onclick="appendToDisplay('pi')">π</button>
-              <button onclick="appendToDisplay('0')">0</button>
-              <button onclick="appendToDisplay('00')">00</button>
-              <button onclick="appendToDisplay('.')">.</button>
-              <button onclick="appendToDisplay('-')">-</button>          
-        
-              <!-- Sixth Row -->
-              <button onclick="appendToDisplay('1/')">1/x</button>
-              <button onclick="appendToDisplay('e')">e</button>
-              <button onclick="appendToDisplay('abs(')">|x|</button>
-              <button onclick="appendToDisplay('^')">^</button>
-              <button onclick="calculateResult()" class="equals">=</button>
-            </div>
-        </div>
-
-        <!-- BMI Calculator -->
-        <section class="calculator-bmi">
-            <h2>BMI Calculator</h2>
-            <div class="calculator-form">
-              <label for="weight">Weight (kg):</label>
-              <input type="number" id="weight" placeholder="Enter your weight">
-              
-              <label for="height">Height (cm):</label>
-              <input type="number" id="height" placeholder="Enter your height">
-              
-              <button id="calculate-bmi">Calculate BMI</button>
-            </div>
-            <div id="result" class="result"></div>
-          </section>
-    </main>
-
-    <!-- Free Online Calculators -->
-    <section class="calculator-category">
-        <h2>Free Online Calculators</h2>
-            <div class="calculator-list">
-                <a href="financial-calculator.html"><h3>Financial Calculators</h3></a>
-                <li><a href="#">Mortage Calculator</a></li>
-                <li><a href="#">Loan Calculator</a></li>
-                <li><a href="#">Auto Loan Calculator</a></li>
-                <li><a href="#">Intereset Calculator</a></li>
-                <li><a href="#">Payment Calculator</a></li>
-                <li><a href="#">Retirement Calculator</a></li>
-                <li><a href="#">Amortization Calculator</a></li>
-                <li><a href="#">Investment Calculator</a></li>
-                <li><a href="#">Inflation Calculator</a></li>
-                <li><a href="#">Finance Calculator</a></li>
-                <li><a href="#">Income Tax Calculator</a></li>
-                <li><a href="#">Compound Interest Calculator</a></li>
-            </div>
-            <div class="calculator-list2">
-                <a href="health-and-fitness-calulator.html"><h3>Health & Fitness Calculators</h3></a>
-                <li><a href="#">Mortage Calculator</a></li>
-                <li><a href="#">Loan Calculator</a></li>
-                <li><a href="#">Auto Loan Calculator</a></li>
-                <li><a href="#">Intereset Calculator</a></li>
-                <li><a href="#">Payment Calculator</a></li>
-                <li><a href="#">Retirement Calculator</a></li>
-                <li><a href="#">Amortization Calculator</a></li>
-                <li><a href="#">Investment Calculator</a></li>
-                <li><a href="#">Inflation Calculator</a></li>
-                <li><a href="#">Finance Calculator</a></li>
-                <li><a href="#">Income Tax Calculator</a></li>
-            </div>
-            <div class="calculator-list">
-                <a href="math-calculator.html"><h3>Math Calculators</h3></a>
-                <li><a href="#">Mortage Calculator</a></li>
-                <li><a href="#">Loan Calculator</a></li>
-                <li><a href="#">Auto Loan Calculator</a></li>
-                <li><a href="#">Intereset Calculator</a></li>
-                <li><a href="#">Payment Calculator</a></li>
-                <li><a href="#">Retirement Calculator</a></li>
-                <li><a href="#">Amortization Calculator</a></li>
-                <li><a href="#">Investment Calculator</a></li>
-                <li><a href="#">Inflation Calculator</a></li>
-                <li><a href="#">Finance Calculator</a></li>
-                <li><a href="#">Income Tax Calculator</a></li>
-                <li><a href="#">Compound Interest Calculator</a></li>
-            </div>
-
-            <div class="calculator-list">
-                <a href="science-calculator.html"><h3>Science Calculators</h3></a>
-                <li><a href="#">Mortage Calculator</a></li>
-                <li><a href="#">Loan Calculator</a></li>
-                <li><a href="#">Auto Loan Calculator</a></li>
-                <li><a href="#">Intereset Calculator</a></li>
-                <li><a href="#">Payment Calculator</a></li>
-                <li><a href="#">Retirement Calculator</a></li>
-                <li><a href="#">Amortization Calculator</a></li>
-                <li><a href="#">Investment Calculator</a></li>
-                <li><a href="#">Inflation Calculator</a></li>
-                <li><a href="#">Finance Calculator</a></li>
-                <li><a href="#">Income Tax Calculator</a></li>
-                <li><a href="#">Compound Interest Calculator</a></li>
-            </div>
+    <div class="main-container">
+        <main>
+            <!-- Scientific Calculator -->
+            <div class="calculator">
+                <input type="text" id="display" disabled>
+                <div class="buttons">
+                  <!-- First Row -->
+                  <button onclick="appendToDisplay('fact(')">!</button>
+                  <button onclick="appendToDisplay('(')">(</button>
+                  <button onclick="appendToDisplay(')')">)</button>
+                  <button onclick="appendToDisplay('%')">%</button>
+                  <button onclick="deleteLast()">DEL</button>
+                  <button onclick="clearDisplay()">AC</button>
             
-            <div class="calculator-list">
-                <a href="other-calculator.html"><h3>Other Calculators</h3></a>
-                <li><a href="#">Mortage Calculator</a></li>
-                <li><a href="#">Loan Calculator</a></li>
-                <li><a href="#">Auto Loan Calculator</a></li>
-                <li><a href="#">Intereset Calculator</a></li>
-                <li><a href="#">Payment Calculator</a></li>
-                <li><a href="#">Retirement Calculator</a></li>
-                <li><a href="#">Amortization Calculator</a></li>
-                <li><a href="#">Investment Calculator</a></li>
-                <li><a href="#">Inflation Calculator</a></li>
-                <li><a href="#">Finance Calculator</a></li>
-                <li><a href="#">Income Tax Calculator</a></li>
-                <li><a href="#">Compound Interest Calculator</a></li>
+                  <!-- Second Row -->
+                  <button onclick="appendToDisplay('sin(')">sin</button>
+                  <button onclick="appendToDisplay('ln(')">ln</button>
+                  <button onclick="appendToDisplay('7')">7</button>
+                  <button onclick="appendToDisplay('8')">8</button>
+                  <button onclick="appendToDisplay('9')">9</button>
+                  <button onclick="appendToDisplay('/')">÷</button>
+            
+                  <!-- Third Row -->
+                  <button onclick="appendToDisplay('cos(')">cos</button>
+                  <button onclick="appendToDisplay('log(')">log</button>
+                  <button onclick="appendToDisplay('4')">4</button>
+                  <button onclick="appendToDisplay('5')">5</button>
+                  <button onclick="appendToDisplay('6')">6</button>
+                  <button onclick="appendToDisplay('*')">×</button>
+            
+                  <!-- Fourth Row -->
+                  <button onclick="appendToDisplay('tan(')">tan</button>
+                  <button onclick="appendToDisplay('sqrt(')">√</button>
+                  <button onclick="appendToDisplay('1')">1</button>
+                  <button onclick="appendToDisplay('2')">2</button>
+                  <button onclick="appendToDisplay('3')">3</button>
+                  <button onclick="appendToDisplay('+')">+</button>      
+                  
+            
+                  <!-- Fifth Row -->
+                  <button onclick="appendToDisplay('10^')">10ˣ</button>
+                  <button onclick="appendToDisplay('pi')">π</button>
+                  <button onclick="appendToDisplay('0')">0</button>
+                  <button onclick="appendToDisplay('00')">00</button>
+                  <button onclick="appendToDisplay('.')">.</button>
+                  <button onclick="appendToDisplay('-')">-</button>          
+            
+                  <!-- Sixth Row -->
+                  <button onclick="appendToDisplay('1/')">1/x</button>
+                  <button onclick="appendToDisplay('e')">e</button>
+                  <button onclick="appendToDisplay('abs(')">|x|</button>
+                  <button onclick="appendToDisplay('^')">^</button>
+                  <button onclick="calculateResult()" class="equals">=</button>
+                </div>
             </div>
-    </section>
+    
+            <!-- BMI Calculator -->
+            <section class="calculator-bmi">
+                <h2>BMI Calculator</h2>
+                <div class="calculator-form">
+                  <label for="weight">Weight (kg):</label>
+                  <input type="number" id="weight" placeholder="Enter your weight">
+                  
+                  <label for="height">Height (cm):</label>
+                  <input type="number" id="height" placeholder="Enter your height">
+                  
+                  <button id="calculate-bmi">Calculate BMI</button>
+                </div>
+                <div id="result" class="result"></div>
+              </section>
+        </main>
+    
+    </div>
+    <!-- Free Online Calculators -->
+    <div class="calculator-category-div">
+        <h2>Free Online Calculators</h2>
+        <section class="calculator-category">
+                <div class="row1">
+                    <div class="calculator-list">
+                        <a href="financial-calculator.html"><h3>Financial Calculators</h3></a>
+                        <li><a href="#">Mortage Calculator</a></li>
+                        <li><a href="#">Loan Calculator</a></li>
+                        <li><a href="#">Auto Loan Calculator</a></li>
+                        <li><a href="#">Intereset Calculator</a></li>
+                        <li><a href="#">Payment Calculator</a></li>
+                        <li><a href="#">Retirement Calculator</a></li>
+                        <li><a href="#">Amortization Calculator</a></li>
+                        <li><a href="#">Investment Calculator</a></li>
+                        <li><a href="#">Inflation Calculator</a></li>
+                        <li><a href="#">Finance Calculator</a></li>
+                        <li><a href="#">Income Tax Calculator</a></li>
+                        <li><a href="compound-interest-calculator.html">Compound Interest Calculator</a></li>
+                    </div>
+                    <div class="calculator-list">
+                        <a href="health-and-fitness-calulator.html"><h3>Health & Fitness Calculators</h3></a>
+                        <li><a href="#">Mortage Calculator</a></li>
+                        <li><a href="#">Loan Calculator</a></li>
+                        <li><a href="#">Auto Loan Calculator</a></li>
+                        <li><a href="#">Intereset Calculator</a></li>
+                        <li><a href="#">Payment Calculator</a></li>
+                        <li><a href="#">Retirement Calculator</a></li>
+                        <li><a href="#">Amortization Calculator</a></li>
+                        <li><a href="#">Investment Calculator</a></li>
+                        <li><a href="#">Inflation Calculator</a></li>
+                        <li><a href="#">Finance Calculator</a></li>
+                        <li><a href="#">Income Tax Calculator</a></li>
+                    </div>
+                    <div class="calculator-list">
+                        <a href="math-calculator.html"><h3>Math Calculators</h3></a>
+                        <li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+                        <li><a href="#">Loan Calculator</a></li>
+                        <li><a href="#">Auto Loan Calculator</a></li>
+                        <li><a href="#">Intereset Calculator</a></li>
+                        <li><a href="#">Payment Calculator</a></li>
+                        <li><a href="#">Retirement Calculator</a></li>
+                        <li><a href="#">Amortization Calculator</a></li>
+                        <li><a href="#">Investment Calculator</a></li>
+                        <li><a href="#">Inflation Calculator</a></li>
+                        <li><a href="#">Finance Calculator</a></li>
+                        <li><a href="#">Income Tax Calculator</a></li>
+                    </div>
+                </div>
+                <div class="row2">
+                    <div class="calculator-list">
+                        <a href="science-calculator.html"><h3>Science Calculators</h3></a>
+                        <li><a href="#">Mortage Calculator</a></li>
+                        <li><a href="#">Loan Calculator</a></li>
+                        <li><a href="#">Auto Loan Calculator</a></li>
+                        <li><a href="#">Intereset Calculator</a></li>
+                        <li><a href="#">Payment Calculator</a></li>
+                        <li><a href="#">Retirement Calculator</a></li>
+                        <li><a href="#">Amortization Calculator</a></li>
+                        <li><a href="#">Investment Calculator</a></li>
+                        <li><a href="#">Inflation Calculator</a></li>
+                        <li><a href="#">Finance Calculator</a></li>
+                        <li><a href="#">Income Tax Calculator</a></li>
+                        <li><a href="#">Compound Interest Calculator</a></li>
+                    </div>
+                    
+                    <div class="calculator-list">
+                        <a href="other-calculator.html"><h3>Other Calculators</h3></a>
+                        <li><a href="#">Mortage Calculator</a></li>
+                        <li><a href="#">Loan Calculator</a></li>
+                        <li><a href="#">Auto Loan Calculator</a></li>
+                        <li><a href="#">Intereset Calculator</a></li>
+                        <li><a href="#">Payment Calculator</a></li>
+                        <li><a href="#">Retirement Calculator</a></li>
+                        <li><a href="#">Amortization Calculator</a></li>
+                        <li><a href="#">Investment Calculator</a></li>
+                        <li><a href="#">Inflation Calculator</a></li>
+                        <li><a href="#">Finance Calculator</a></li>
+                        <li><a href="#">Income Tax Calculator</a></li>
+                        <li><a href="#">Compound Interest Calculator</a></li>
+                    </div>
+
+                    <div class="calculator-list">
+                        <a href="other-calculator.html"><h3>Other Calculators</h3></a>
+                        <li><a href="#">Mortage Calculator</a></li>
+                        <li><a href="#">Loan Calculator</a></li>
+                        <li><a href="#">Auto Loan Calculator</a></li>
+                        <li><a href="#">Intereset Calculator</a></li>
+                        <li><a href="#">Payment Calculator</a></li>
+                        <li><a href="#">Retirement Calculator</a></li>
+                        <li><a href="#">Amortization Calculator</a></li>
+                        <li><a href="#">Investment Calculator</a></li>
+                        <li><a href="#">Inflation Calculator</a></li>
+                        <li><a href="#">Finance Calculator</a></li>
+                        <li><a href="#">Income Tax Calculator</a></li>
+                    </div>
+                </div>
+        </section>
+    </div>
 
 
     <!-- Footer -->
