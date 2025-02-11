@@ -90,10 +90,10 @@ function calculateResult() {
 
   try {
       display = display.replace(/sqrt\(/g, "Math.sqrt(")
-                       .replace(/log\(/g, "Math.log10(")
+                       .replace(/log\(/g, "Math.log2(")
                        .replace(/ln\(/g, "Math.log(")
                        .replace(/abs\(/g, "Math.abs(")
-                       .replace(/1\//g, "(1/")
+                       .replace(/1\/([a-zA-Z0-9]+)/g, "(1/$1)")  // Correct 1/x
                        .replace(/(\d+)\^(\d+)/g, "Math.pow($1, $2)"); // Fix for 10^x
 
       // Convert degrees to radians for trigonometric functions & round results

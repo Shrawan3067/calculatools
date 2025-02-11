@@ -59,7 +59,7 @@ body {
 }
 
 .navbar li a:hover {
-    background-color: #000000;
+    color: #ff0000;
 }
 
 /* .search-container {
@@ -112,13 +112,13 @@ body {
 
 .hamburger-search-container {
     width: 220px;
-    margin-top: 10px;
+    margin-top: 20px;
     border: 1px solid black;
     border-radius: 6px; 
 }
 #hamburger-search {
     width: 100%;
-    padding: 10px 10px; 
+    padding: 8px 10px; 
     border: 1px solid black;
     border-radius: 5px; 
     font-size: 1rem;
@@ -127,20 +127,20 @@ body {
 .search-button {
     background-color: black;
     cursor: pointer;
-    font-size: 25px;
+    font-size: 20px;
     padding: 5px;
     width: 220px;
     margin-top: 15px;
-    box-shadow: 0px 0px 5px 2px white;
+    box-shadow: 0px 0px 5px 1px white;
 }
 .hamburger-socialIcons {
-    width: 220px;
+    width: 140px;
     display: flex;
-    margin-top: 30px;
+    margin-top: 80px;
     justify-content: space-between;
 }
 .hamburger-social {
-    font-size: 35px;
+    font-size: 25px;
     color: white;
     opacity: 1;
     border: none !important;
@@ -302,22 +302,23 @@ button:active {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-bottom: 30px;
+    margin: 20px 0px;
 }
 
 .calculator-category h2 {
     width: 100%;
-    height: 40px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     /* background-color: #6200ea; */
     background-color: black;
     color: white;
+    border-radius: 10px;
 }
 
 .calculator-list {
-    height: 450px;
+    height: 390px;
     width: 30%;
     /* box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2); */
     /* border-radius: 10px; */
@@ -328,7 +329,7 @@ button:active {
 }
 
 .calculator-list2 {
-    height: 450px;
+    height: 390px;
     width: 32%;
     /* box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2); */
     /* border-radius: 10px; */
@@ -338,9 +339,6 @@ button:active {
     margin-top: 1.5rem;
 }
 
-.calculator-list:hover, .calculator-list2:hover {
-    box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.2);
-}
 
 .calculator-list h3, .calculator-list2 h3 {
     font-size: 1.4rem;
@@ -397,7 +395,7 @@ button:active {
 }
 
 .social {
-    font-size: 50px;
+    font-size: 40px;
     color: white;
     opacity: 1;
     margin-right: 10px;
@@ -547,7 +545,7 @@ button:active {
     
     .calculator-list {
         height: auto;
-        width: 320px;
+        width: 350px;
         box-shadow: none;
         border-radius: 0px;
         margin-right: 0px;
@@ -557,7 +555,7 @@ button:active {
     
     .calculator-list2 {
         height: auto;
-        width: 320px;
+        width: 350px;
         box-shadow: none;
         border-radius: 0px;
         margin-right: 0px;
@@ -591,6 +589,7 @@ button:active {
     justify-content: space-between;
     gap: 20px;
     border: 1px solid black;
+    background-color: white;
 }
 
 .left-container, .right-container {
