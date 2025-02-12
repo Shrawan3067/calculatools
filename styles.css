@@ -24,7 +24,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
     padding: 0px 20px;
     position: sticky;
     top: 0;
@@ -432,7 +431,7 @@ main {
         width: 100%;
     }
     .logo {
-        width: 260px;
+        width: 285px;
     }
     #logo {
         height: 40px;
@@ -464,7 +463,8 @@ main {
     .header {
         position: fixed;
         top: 0;
-        padding: 10px;
+        padding: 5px;
+        gap: 0px;
     }
     .navbar {
         display: none;
@@ -515,7 +515,7 @@ main {
         cursor: pointer;
     }
     .logo {
-        width: 230px;
+        width: 260px;
     }
     #logo {
         height: 40px;

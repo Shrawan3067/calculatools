@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Tracker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<style>
+    /* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  max-width: 400px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#city-input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 70%;
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+#search-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #ff6f61;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#search-btn:hover {
+  background: #ff3b2f;
+}
+
+.weather-card {
+  margin-top: 20px;
+}
+
+#weather-icon {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+#location {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+#temperature, #humidity, #pollution, #description {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+</style>
+<body>
+  <div class="container">
+    <h1>Weather Tracker</h1>
+    <div class="search-box">
+      <input type="text" id="city-input" placeholder="Enter city or country">
+      <button id="search-btn">Search</button>
+    </div>
+    <div class="weather-card">
+      <div id="weather-icon"></div>
+      <div id="location"></div>
+      <div id="temperature"></div>
+      <div id="humidity"></div>
+      <div id="pollution"></div>
+      <div id="description"></div>
+    </div>
+  </div>
+  <script>
+    // Replace with your OpenWeatherMap API key
+const apiKey = 'c5cbd314b479236087dbd9b5c40be14c';
+
+// DOM Elements
+const cityInput = document.getElementById('city-input');
+const searchBtn = document.getElementById('search-btn');
+const locationElement = document.getElementById('location');
+const temperatureElement = document.getElementById('temperature');
+const humidityElement = document.getElementById('humidity');
+const pollutionElement = document.getElementById('pollution');
+const descriptionElement = document.getElementById('description');
+const weatherIcon = document.getElementById('weather-icon');
+
+// Fetch Weather Data
+async function fetchWeather(city) {
+  try {
+    // Fetch weather data
+    const weatherResponse = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
+    );
+    const weatherData = await weatherResponse.json();
+
+    // Fetch air pollution data (requires latitude and longitude)
+    const { coord } = weatherData;
+    const pollutionResponse = await fetch(
+      `http://api.openweathermap.org/data/2.5/air_pollution?lat=${coord.lat}&lon=${coord.lon}&appid=${apiKey}`
+    );
+    const pollutionData = await pollutionResponse.json();
+
+    // Update UI with weather data
+    locationElement.textContent = `${weatherData.name}, ${weatherData.sys.country}`;
+    temperatureElement.textContent = `Temperature: ${weatherData.main.temp}°C`;
+    humidityElement.textContent = `Humidity: ${weatherData.main.humidity}%`;
+    pollutionElement.textContent = `Air Quality: ${getAirQuality(pollutionData.list[0].main.aqi)}`;
+    descriptionElement.textContent = `Weather: ${weatherData.weather[0].description}`;
+    weatherIcon.innerHTML = getWeatherIcon(weatherData.weather[0].main);
+  } catch (error) {
+    alert('City not found. Please try again.');
+  }
+}
+
+// Get Air Quality Description
+function getAirQuality(aqi) {
+  switch (aqi) {
+    case 1:
+      return 'Good';
+    case 2:
+      return 'Fair';
+    case 3:
+      return 'Moderate';
+    case 4:
+      return 'Poor';
+    case 5:
+      return 'Very Poor';
+    default:
+      return 'Unknown';
+  }
+}
+
+// Get Weather Icon
+function getWeatherIcon(weather) {
+  switch (weather.toLowerCase()) {
+    case 'clear':
+      return '☀️';
+    case 'clouds':
+      return '☁️';
+    case 'rain':
+      return '🌧️';
+    case 'snow':
+      return '❄️';
+    case 'thunderstorm':
+      return '⛈️';
+    default:
+      return '🌈';
+  }
+}
+
+// Event Listener for Search Button
+searchBtn.addEventListener('click', () => {
+  const city = cityInput.value.trim();
+  if (city) {
+    fetchWeather(city);
+  } else {
+    alert('Please enter a city or country.');
+  }
+});
+
+// Optional: Fetch weather for a default city on page load
+fetchWeather('London');
+  </script>
+</body>
+</html>
