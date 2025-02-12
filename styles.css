@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0; 
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: poppins, Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -60,7 +61,8 @@ body {
 }
 
 .navbar li a:hover {
-    color: #ff0000;
+    /* color: #ff0000; */
+    color: red;
 }
 
 /* .search-container {
@@ -212,7 +214,7 @@ main {
     gap: 10px;
 }
 
-button {
+#button {
     background-color: #4c4c4c;
     color: #ffffff;
     font-size: 1.1rem;
@@ -223,20 +225,20 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+#button:hover {
     background-color: #5c5c5c;
 }
 
-button.equals {
+#button.equals {
     grid-column: span 2;
     background-color: #ff9500;
 }
 
-button.equals:hover {
+#button.equals:hover {
     background-color: #ffaa33;
 }
 
-button:active {
+#button:active {
     transform: scale(0.95);
 }
 
@@ -298,13 +300,10 @@ button:active {
 
   /* Free Online Calculators */
 .calculator-category-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+    width: 70%;
     background-color: white;
 }
-.calculator-category-div h2 {
+.freeCalculator {
     width: 100%;
     text-align: center;
     padding: 10px;
@@ -312,12 +311,15 @@ button:active {
     background-color: black;
 }
 
+.freeCalculator h2 {
+    font-weight: 600;
+}
+
 .calculator-category {
     height: auto;
     width: 100%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     margin-bottom: 20px;
 }
 
@@ -328,15 +330,15 @@ button:active {
 }
 
 .calculator-list {
-    height: 350px;
-    width: 98%;
+    height: auto;
+    width: auto;
     padding: 10px;
     margin-top: 1.5rem;
 }
 
 .calculator-list h3, .calculator-list2 h3 {
     font-size: 1.4rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
     color: green;
     display: flex;
     align-items: center;
@@ -422,9 +424,12 @@ button:active {
 /****************************************************************************************************************************************************************************************************************/
 
 /* Media Query to make responsive */
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1024px) {
     * {
         overflow-x: hidden;
+    }
+    main {
+        width: 100%;
     }
     .logo {
         width: 260px;
@@ -438,6 +443,14 @@ button:active {
     .header {
         display: flex;
         justify-content: space-between;
+    }
+    .calculator-category-div {
+        width: 98%;
+    }
+    .calculator-list {
+        height: auto;
+        width: 100%;
+        margin-top: 1.5rem;
     }
 }
 
@@ -521,7 +534,7 @@ button:active {
         grid-template-columns: repeat(6, 1fr);
         gap: 8px;
     }
-    button {
+    #button {
         font-size: 14px;
         padding: 10px;
     }
@@ -533,7 +546,9 @@ button:active {
     .category-logo {
         display: none;
     }
-    
+    .calculator-category-div {
+        width: 100%;
+    }
     .calculator-category {
         display: flex;
         flex-direction: column;
@@ -580,6 +595,7 @@ button:active {
 /* Financial Calculators */
 .financial-container {
     width: 70%;
+    height: auto;
     min-width: 768px;
     padding: 20px;
     display: flex;
@@ -597,12 +613,105 @@ button:active {
     flex-direction: column;
     width: 65%;
 }
+
+.up-container h2 {
+    font-size: 1.5rem;
+}
+.up-container p {
+    font-size: 1.2rem;
+}
+
+
 .right-container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 35%;
 }
+
+
+.right-box {
+    height: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.financial-search {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.financial-search input {
+    width: 75%;
+    padding: 5px;
+}
+.financial-search button {
+    background-color: #6200ea;
+    width: 24%;
+    color: white;
+    border: none;
+}
+.financial-container button:hover {
+    background-color: #3700b3;
+}
+
+.financial-content-box {
+    height: 90%;
+    border: 1px solid black;
+}
+.financial-content-box h3 {
+    background-color: #000000;
+    color: white;
+    font-weight: 600;
+    padding: 5px;
+}
+.financial-content-box li {
+    list-style-type: none;
+    padding-left: 5px;
+}
+.financial-content-box li a {
+    text-decoration: none;
+    color: blue;
+}
+.financial-content-box li a:hover {
+    color: red;
+}
+
+.up-container {
+    width: 100%;
+    height: 70px;
+
+}
+
+.down-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+.down-container h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.down-container1 li a, .down-container2 li a {
+    color: blue;
+    text-decoration: none;
+}
+.down-container1 li a:hover, .down-container2 li a:hover {
+    color: red;
+}
+
+@media screen and (max-width: 1024px) {
+    .down-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/****************************************************************************************************************************************************************************************************************/
 
 @media screen and (max-width: 767px) {
     .right-container {
@@ -626,25 +735,11 @@ button:active {
 }
 
 
-.right-box {
-    height: 500px;
-    width: 100%;
-    border: 1px solid black;
-}
 
-.up-container {
-    width: 100%;
-    height: 70px;
 
-}
+/****************************************************************************************************************************************************************************************************************/
 
-.down-container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 930px;
-}
-
+/* Compound Interest Calculator */
 .ci-container {
     width: 100%;
     margin: 50px auto;

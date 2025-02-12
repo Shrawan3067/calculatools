@@ -66,52 +66,52 @@
                 <input type="text" id="display" disabled>
                 <div class="buttons">
                   <!-- First Row -->
-                  <button onclick="appendToDisplay('fact(')">!</button>
-                  <button onclick="appendToDisplay('(')">(</button>
-                  <button onclick="appendToDisplay(')')">)</button>
-                  <button onclick="appendToDisplay('%')">%</button>
-                  <button onclick="deleteLast()">DEL</button>
-                  <button onclick="clearDisplay()">AC</button>
+                  <button onclick="appendToDisplay('fact(')" id="button">!</button>
+                  <button onclick="appendToDisplay('(')" id="button">(</button>
+                  <button onclick="appendToDisplay(')')" id="button">)</button>
+                  <button onclick="appendToDisplay('%')" id="button">%</button>
+                  <button onclick="deleteLast()" id="button">DEL</button>
+                  <button onclick="clearDisplay()" id="button">AC</button>
             
                   <!-- Second Row -->
-                  <button onclick="appendToDisplay('sin(')">sin</button>
-                  <button onclick="appendToDisplay('ln(')">ln</button>
-                  <button onclick="appendToDisplay('7')">7</button>
-                  <button onclick="appendToDisplay('8')">8</button>
-                  <button onclick="appendToDisplay('9')">9</button>
-                  <button onclick="appendToDisplay('/')">÷</button>
+                  <button onclick="appendToDisplay('sin(')" id="button">sin</button>
+                  <button onclick="appendToDisplay('ln(')" id="button">ln</button>
+                  <button onclick="appendToDisplay('7')" id="button">7</button>
+                  <button onclick="appendToDisplay('8')" id="button">8</button>
+                  <button onclick="appendToDisplay('9')" id="button">9</button>
+                  <button onclick="appendToDisplay('/')" id="button">÷</button>
             
                   <!-- Third Row -->
-                  <button onclick="appendToDisplay('cos(')">cos</button>
-                  <button onclick="appendToDisplay('log(')">log</button>
-                  <button onclick="appendToDisplay('4')">4</button>
-                  <button onclick="appendToDisplay('5')">5</button>
-                  <button onclick="appendToDisplay('6')">6</button>
-                  <button onclick="appendToDisplay('*')">×</button>
+                  <button onclick="appendToDisplay('cos(')" id="button">cos</button>
+                  <button onclick="appendToDisplay('log(')" id="button">log</button>
+                  <button onclick="appendToDisplay('4')" id="button">4</button>
+                  <button onclick="appendToDisplay('5')" id="button">5</button>
+                  <button onclick="appendToDisplay('6')" id="button">6</button>
+                  <button onclick="appendToDisplay('*')" id="button">×</button>
             
                   <!-- Fourth Row -->
-                  <button onclick="appendToDisplay('tan(')">tan</button>
-                  <button onclick="appendToDisplay('sqrt(')">√</button>
-                  <button onclick="appendToDisplay('1')">1</button>
-                  <button onclick="appendToDisplay('2')">2</button>
-                  <button onclick="appendToDisplay('3')">3</button>
-                  <button onclick="appendToDisplay('+')">+</button>      
+                  <button onclick="appendToDisplay('tan(')" id="button">tan</button>
+                  <button onclick="appendToDisplay('sqrt(')" id="button">√</button>
+                  <button onclick="appendToDisplay('1')" id="button">1</button>
+                  <button onclick="appendToDisplay('2')" id="button">2</button>
+                  <button onclick="appendToDisplay('3')" id="button">3</button>
+                  <button onclick="appendToDisplay('+')" id="button">+</button>      
                   
             
                   <!-- Fifth Row -->
-                  <button onclick="appendToDisplay('10^')">10ˣ</button>
-                  <button onclick="appendToDisplay('pi')">π</button>
-                  <button onclick="appendToDisplay('0')">0</button>
-                  <button onclick="appendToDisplay('00')">00</button>
-                  <button onclick="appendToDisplay('.')">.</button>
-                  <button onclick="appendToDisplay('-')">-</button>          
+                  <button onclick="appendToDisplay('10^')" id="button">10ˣ</button>
+                  <button onclick="appendToDisplay('pi')" id="button">π</button>
+                  <button onclick="appendToDisplay('0')" id="button">0</button>
+                  <button onclick="appendToDisplay('00')" id="button">00</button>
+                  <button onclick="appendToDisplay('.')" id="button">.</button>
+                  <button onclick="appendToDisplay('-')" id="button">-</button>          
             
                   <!-- Sixth Row -->
-                  <button onclick="appendToDisplay('1/')">1/x</button>
-                  <button onclick="appendToDisplay('e')">e</button>
-                  <button onclick="appendToDisplay('abs(')">|x|</button>
-                  <button onclick="appendToDisplay('^')">^</button>
-                  <button onclick="calculateResult()" class="equals">=</button>
+                  <button onclick="appendToDisplay('1/')" id="button">1/x</button>
+                  <button onclick="appendToDisplay('e')" id="button">e</button>
+                  <button onclick="appendToDisplay('abs(')" id="button">|x|</button>
+                  <button onclick="appendToDisplay('^')" id="button">^</button>
+                  <button onclick="calculateResult()" class="equals" id="button">=</button>
                 </div>
             </div>
     
@@ -132,9 +132,11 @@
         </main>
     
     </div>
+    <div class="freeCalculator">
+        <h2>Free Online Calculators</h2>
+    </div>
     <!-- Free Online Calculators -->
     <div class="calculator-category-div">
-        <h2>Free Online Calculators</h2>
         <section class="calculator-category">
                 <div class="row1">
                     <div class="calculator-list">
@@ -215,18 +217,29 @@
                     </div>
 
                     <div class="calculator-list">
-                        <a href="other-calculator.html"><h3>Other Calculators</h3></a>
-                        <li><a href="#">Mortage Calculator</a></li>
-                        <li><a href="#">Loan Calculator</a></li>
-                        <li><a href="#">Auto Loan Calculator</a></li>
-                        <li><a href="#">Intereset Calculator</a></li>
-                        <li><a href="#">Payment Calculator</a></li>
-                        <li><a href="#">Retirement Calculator</a></li>
-                        <li><a href="#">Amortization Calculator</a></li>
-                        <li><a href="#">Investment Calculator</a></li>
-                        <li><a href="#">Inflation Calculator</a></li>
-                        <li><a href="#">Finance Calculator</a></li>
-                        <li><a href="#">Income Tax Calculator</a></li>
+                        <div class="right-box">
+                            <div class="financial-search">
+                                <input type="text" placeholder="Search for a calculator...">
+                                <button type="submit">Search</button>
+                            </div>
+                            <div class="financial-content-box">
+                                <h3>List of Calcualtors</h3>
+                                <div class="financial-content-box1">
+                                    <li><a href="">BMI Calculator</a></li>
+                                    <li><a href="">Calorie Calculator</a></li>
+                                    <li><a href="">Body Fat Calculator</a></li>
+                                    <li><a href="">BMR Calculator</a></li>
+                                    <li><a href="">Ideal Weight Calculator</a></li>
+                                    <li><a href="">Pace Calculator Calculator</a></li>
+                                    <li><a href="">Army Body Fat Calculator</a></li>
+                                    <li><a href="">Lean Body Mass Calculator</a></li>
+                                    <li><a href="">Healthy Weight Calculator</a></li>
+                                    <li><a href="">Calories Burned Calculator</a></li>
+                                    <li><a href="">One Rep Max Calculator</a></li>
+                                    <li><a href="">Pregnancy Calculator</a></li>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
         </section>
