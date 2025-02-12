@@ -12,6 +12,8 @@ body {
     align-items: center;
 }
 
+/****************************************************************************************************************************************************************************************************************/
+
 /* Top Header / Navbar */
 .header {
     width: 100%;
@@ -83,6 +85,7 @@ body {
     cursor: pointer;
 } */
 
+/****************************************************************************************************************************************************************************************************************/
 
 .hamburger-menu {
     display: none;
@@ -159,6 +162,7 @@ body {
    opacity: 0.8;
 }
 
+/****************************************************************************************************************************************************************************************************************/
 
 /* Main Section including scientific calculator and BMI Calculator */
 main {
@@ -176,6 +180,8 @@ main {
     justify-content: center;
     background-color: #d1dde9;
 }
+
+/****************************************************************************************************************************************************************************************************************/
 
 /* Scientific Calculator */
 .calculator {
@@ -234,6 +240,8 @@ button:active {
     transform: scale(0.95);
 }
 
+/****************************************************************************************************************************************************************************************************************/
+
 /* BMI Calculator */
 .calculator-bmi {
     width: 40%;
@@ -286,31 +294,9 @@ button:active {
     font-weight: bold;
   }
 
-.category-logo {
-    display: flex;
-    height: 150px;
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
-}
+/****************************************************************************************************************************************************************************************************************/
 
-.category-logo img {
-    border-radius: 10px;
-}
-
-
-/* Free Online Calculators */
-.calculator-category {
-    height: auto;
-    width: 70%;
-    min-width: 768px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-}
-
+  /* Free Online Calculators */
 .calculator-category-div {
     display: flex;
     flex-direction: column;
@@ -326,16 +312,13 @@ button:active {
     background-color: black;
 }
 
-.calculator-category h2 {
+.calculator-category {
+    height: auto;
     width: 100%;
-    height: 50px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background-color: #6200ea; */
-    background-color: black;
-    color: white;
-    border-radius: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
 .row1, .row2 {
@@ -344,12 +327,9 @@ button:active {
     justify-content: space-between;
 }
 
-
 .calculator-list {
     height: 350px;
-    width: auto;
-    /* box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2); */
-    /* border-radius: 10px; */
+    width: 98%;
     padding: 10px;
     margin-top: 1.5rem;
 }
@@ -361,7 +341,6 @@ button:active {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-    border-radius: 5px;
 }
 .calculator-list>a {
     text-decoration: none;
@@ -394,6 +373,7 @@ button:active {
     color: rgb(136, 8, 8);
 }
 
+/****************************************************************************************************************************************************************************************************************/
 
 /* Footer */
 .footer {
@@ -439,6 +419,7 @@ button:active {
     opacity: 0.8;
 }
 
+/****************************************************************************************************************************************************************************************************************/
 
 /* Media Query to make responsive */
 @media screen and (max-width: 990px) {
@@ -459,6 +440,9 @@ button:active {
         justify-content: space-between;
     }
 }
+
+/****************************************************************************************************************************************************************************************************************/
+
 
 @media screen and (max-width: 767px) {
     * {
@@ -553,27 +537,28 @@ button:active {
     .calculator-category {
         display: flex;
         flex-direction: column;
+        width: 100%;
         align-items: center;
-        padding: 0px;
+        padding: 2px;
     }
     .row1, .row2 {
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
     
     .calculator-list {
         height: auto;
-        width: 350px;
+        /* width: 350px; */
         box-shadow: none;
         border-radius: 0px;
         margin-right: 0px;
         margin-top: 1rem;
         padding: 0px;
     }
-    
-    .calculator-list:hover, .calculator-list2:hover {
-        box-shadow: none;
+    .calculator-list li {
+        padding-left: 10px;
     }
     
     .row1 h3, .row2 h3 {
@@ -584,11 +569,13 @@ button:active {
         display: flex;
         align-items: center;
         margin-bottom: 10px;
-        padding-left: 5px;
-        width: 350px;
+        padding-left: 10px;
+        /* width: 350px; */
+        width: 100%;
     }
 }
 
+/****************************************************************************************************************************************************************************************************************/
 
 /* Financial Calculators */
 .financial-container {
